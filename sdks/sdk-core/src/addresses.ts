@@ -87,20 +87,22 @@ export const V2_ROUTER_ADDRESSES: AddressMap = {
 
 // Networks that share most of the same addresses i.e. Mainnet, Goerli, Optimism, Arbitrum, Polygon
 const DEFAULT_ADDRESSES: ChainAddresses = {
-  v3CoreFactoryAddress: '0x1F98431c8aD98523631AE4a59f267346ea31F984',
-  multicallAddress: '0x1F98415757620B543A52E61c46B32eB19261F984',
-  quoterAddress: '0xb27308f9F90D607463bb33eA1BeBb41C27CE5AB6',
-  v3MigratorAddress: '0xA5644E29708357803b5A882D272c41cC0dF92B34',
-  nonfungiblePositionManagerAddress: '0xC36442b4a4522E871399CD717aBDD847Ab11FE88',
+  v3CoreFactoryAddress: '0xF1398cA2C4F1113C5B618D71E4751D2E744f8369',
+  multicallAddress: '0x926659bA37970CFC4723aa4B098204eEC0b6965e',
+  quoterAddress: '0x823022BB81e50aBcD1f6cf9F8eE6e2557A345a9d',
+  v3MigratorAddress: '0x4407B6e7eB9c877cB1192a681a91feF340F8817d',
+  nonfungiblePositionManagerAddress: '0x3D34Ae8e53dc993C0F7Ee1AAa8020d3F0279147b',
 }
 const MAINNET_ADDRESSES: ChainAddresses = {
   ...DEFAULT_ADDRESSES,
   mixedRouteQuoterV1Address: '0x84E44095eeBfEC7793Cd7d5b57B7e401D7f1cA2E',
 
-  v4PoolManagerAddress: '0x000000000004444c5dc75cB358380D2e3dE08A90',
-  v4PositionManagerAddress: '0xbd216513d74c8cf14cf4747e6aaa6420ff64ee9e',
-  v4StateView: '0x7ffe42c4a5deea5b0fec41c94c136cf115597227',
-  v4QuoterAddress: '0x52f0e24d1c21c8a0cb1e5a5dd6198556bd9e1203',
+  v4PoolManagerAddress: '0x3F4F166A11D44fb2F50E85Cd22008D81e2D1FF92',
+  v4PositionManagerAddress: '0x3F4F166A11D44fb2F50E85Cd22008D81e2D1FF92',
+  v4StateView: '0x3F4F166A11D44fb2F50E85Cd22008D81e2D1FF92',
+  v4QuoterAddress: '0x3F4F166A11D44fb2F50E85Cd22008D81e2D1FF92',
+  tickLensAddress: '0x436f08a0c239e9bC5db55c90CF73efC6D2E8C325',
+  swapRouter02Address: '0x7cE273df74dc43c79E5880Dd2c3eB44309236743'
 }
 const GOERLI_ADDRESSES: ChainAddresses = {
   ...DEFAULT_ADDRESSES,

@@ -20,7 +20,7 @@ export abstract class MulticallExtended {
   /**
    * Cannot be constructed.
    */
-  private constructor() {}
+  private constructor() { }
 
   public static encodeMulticall(calldatas: string | string[], validation?: Validation): string {
     // if there's no validation, we can just fall back to regular multicall

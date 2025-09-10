@@ -54,9 +54,9 @@ export class PriorityOrderTrade<
     const amount = this.expectedAmounts?.expectedAmountIn
       ? this.getExpectedAmountIn()
       : CurrencyAmount.fromRawAmount(
-          this._currencyIn,
-          this.order.info.input.amount.toString()
-        );
+        this._currencyIn,
+        this.order.info.input.amount.toString()
+      );
     this._inputAmount = amount;
     return amount;
   }

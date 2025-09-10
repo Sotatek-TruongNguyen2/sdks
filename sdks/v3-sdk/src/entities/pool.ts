@@ -71,11 +71,11 @@ export class Pool {
     const nextTickSqrtRatioX96 = TickMath.getSqrtRatioAtTick(tickCurrent + 1)
     invariant(
       JSBI.greaterThanOrEqual(JSBI.BigInt(sqrtRatioX96), tickCurrentSqrtRatioX96) &&
-        JSBI.lessThanOrEqual(JSBI.BigInt(sqrtRatioX96), nextTickSqrtRatioX96),
+      JSBI.lessThanOrEqual(JSBI.BigInt(sqrtRatioX96), nextTickSqrtRatioX96),
       'PRICE_BOUNDS'
     )
-    // always create a copy of the list since we want the pool's tick list to be immutable
-    ;[this.token0, this.token1] = tokenA.sortsBefore(tokenB) ? [tokenA, tokenB] : [tokenB, tokenA]
+      // always create a copy of the list since we want the pool's tick list to be immutable
+      ;[this.token0, this.token1] = tokenA.sortsBefore(tokenB) ? [tokenA, tokenB] : [tokenB, tokenA]
     this.fee = fee
     this.sqrtRatioX96 = JSBI.BigInt(sqrtRatioX96)
     this.liquidity = JSBI.BigInt(liquidity)

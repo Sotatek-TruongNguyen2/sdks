@@ -201,7 +201,7 @@ export abstract class NonfungiblePositionManager {
   /**
    * Cannot be constructed.
    */
-  private constructor() {}
+  private constructor() { }
 
   private static encodeCreate(pool: Pool): string {
     return NonfungiblePositionManager.INTERFACE.encodeFunctionData('createAndInitializePoolIfNecessary', [

@@ -192,14 +192,14 @@ export class Trade<TInput extends Currency, TOutput extends Currency, TTradeType
       inputAmount: this.inputAmount,
       inputAmountNative: inputNativeCurrency
         ? this.swaps.reduce((total, swap) => {
-            return swap.route.pathInput.isNative ? total.add(swap.inputAmount) : total
-          }, CurrencyAmount.fromRawAmount(inputNativeCurrency, 0))
+          return swap.route.pathInput.isNative ? total.add(swap.inputAmount) : total
+        }, CurrencyAmount.fromRawAmount(inputNativeCurrency, 0))
         : undefined,
       outputAmount: this.outputAmount,
       outputAmountNative: outputNativeCurrency
         ? this.swaps.reduce((total, swap) => {
-            return swap.route.pathOutput.isNative ? total.add(swap.outputAmount) : total
-          }, CurrencyAmount.fromRawAmount(outputNativeCurrency, 0))
+          return swap.route.pathOutput.isNative ? total.add(swap.outputAmount) : total
+        }, CurrencyAmount.fromRawAmount(outputNativeCurrency, 0))
         : undefined,
     }
   }

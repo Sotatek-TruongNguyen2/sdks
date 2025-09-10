@@ -92,16 +92,16 @@ const DUTCH_ORDER_TYPES = {
 
 const DUTCH_ORDER_ABI = [
   "tuple(" +
-    [
-      "tuple(address,address,uint256,uint256,address,bytes)",
-      "uint256",
-      "uint256",
-      "address",
-      "uint256",
-      "tuple(address,uint256,uint256)",
-      "tuple(address,uint256,uint256,address)[]",
-    ].join(",") +
-    ")",
+  [
+    "tuple(address,address,uint256,uint256,address,bytes)",
+    "uint256",
+    "uint256",
+    "address",
+    "uint256",
+    "tuple(address,uint256,uint256)",
+    "tuple(address,uint256,uint256,address)[]",
+  ].join(",") +
+  ")",
 ];
 
 export class DutchOrder implements OffChainOrder {

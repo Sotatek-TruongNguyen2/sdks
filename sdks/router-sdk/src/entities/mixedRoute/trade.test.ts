@@ -663,11 +663,11 @@ describe('MixedRouteTrade', () => {
         let exactIn: MixedRouteTrade<Token, Token, TradeType.EXACT_INPUT>
         beforeEach(
           async () =>
-            (exactIn = await MixedRouteTrade.fromRoute(
-              new MixedRouteSDK([pool_v3_0_1, pool_v3_1_2], token0, token2),
-              CurrencyAmount.fromRawAmount(token0, 10000),
-              TradeType.EXACT_INPUT
-            ))
+          (exactIn = await MixedRouteTrade.fromRoute(
+            new MixedRouteSDK([pool_v3_0_1, pool_v3_1_2], token0, token2),
+            CurrencyAmount.fromRawAmount(token0, 10000),
+            TradeType.EXACT_INPUT
+          ))
         )
 
         it('throws if less than 0', () => {
@@ -1355,11 +1355,11 @@ describe('MixedRouteTrade', () => {
         )
         beforeEach(
           async () =>
-            (exactIn = await MixedRouteTrade.fromRoute(
-              new MixedRouteSDK([large_pair_0_1, pool_v3_1_2], token0, token2),
-              CurrencyAmount.fromRawAmount(token0, 10000),
-              TradeType.EXACT_INPUT
-            ))
+          (exactIn = await MixedRouteTrade.fromRoute(
+            new MixedRouteSDK([large_pair_0_1, pool_v3_1_2], token0, token2),
+            CurrencyAmount.fromRawAmount(token0, 10000),
+            TradeType.EXACT_INPUT
+          ))
         )
 
         it('throws if less than 0', () => {

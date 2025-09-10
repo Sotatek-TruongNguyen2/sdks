@@ -373,27 +373,27 @@ export class UnsignedV3DutchOrder implements OffChainOrder {
      * Full order hash that should be signed over by the cosigner
      */
     cosignatureHash(cosignerData: V3CosignerData): string {
-      const abiCoder = new ethers.utils.AbiCoder();
-  
-      return ethers.utils.solidityKeccak256(
-        ["bytes32", "uint256", "bytes"],
-        [
-          this.hash(),
-          this.chainId,
-          abiCoder.encode(
-            [COSIGNER_DATA_TUPLE_ABI],
+        const abiCoder = new ethers.utils.AbiCoder();
+
+        return ethers.utils.solidityKeccak256(
+            ["bytes32", "uint256", "bytes"],
             [
-                [
-                    cosignerData.decayStartBlock,
-                    cosignerData.exclusiveFiller,
-                    cosignerData.exclusivityOverrideBps,
-                    cosignerData.inputOverride,
-                    cosignerData.outputOverrides,
-                ],
+                this.hash(),
+                this.chainId,
+                abiCoder.encode(
+                    [COSIGNER_DATA_TUPLE_ABI],
+                    [
+                        [
+                            cosignerData.decayStartBlock,
+                            cosignerData.exclusiveFiller,
+                            cosignerData.exclusivityOverrideBps,
+                            cosignerData.inputOverride,
+                            cosignerData.outputOverrides,
+                        ],
+                    ]
+                ),
             ]
-          ),
-        ]
-      );
+        );
     }
 
     static parse(

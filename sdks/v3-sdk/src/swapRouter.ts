@@ -54,7 +54,7 @@ export abstract class SwapRouter {
   /**
    * Cannot be constructed.
    */
-  private constructor() {}
+  private constructor() { }
 
   /**
    * Produces the on-chain method name to call and the hex encoded parameters to pass as arguments for a given trade.

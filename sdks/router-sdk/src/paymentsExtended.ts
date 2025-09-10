@@ -14,7 +14,7 @@ export abstract class PaymentsExtended {
   /**
    * Cannot be constructed.
    */
-  private constructor() {}
+  private constructor() { }
 
   public static encodeUnwrapWETH9(amountMinimum: JSBI, recipient?: string, feeOptions?: FeeOptions): string {
     // if there's a recipient, just pass it along

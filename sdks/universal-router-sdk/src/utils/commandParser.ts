@@ -43,7 +43,7 @@ export abstract class CommandParser {
 
 // Parses commands based on given command definition
 export class GenericCommandParser {
-  constructor(private readonly commandDefinition: CommandsDefinition) {}
+  constructor(private readonly commandDefinition: CommandsDefinition) { }
 
   public parse(commands: string, inputs: string[]): UniversalRouterCall {
     const commandTypes = GenericCommandParser.getCommands(commands)

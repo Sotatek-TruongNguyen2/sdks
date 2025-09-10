@@ -7,7 +7,7 @@ export abstract class Multicall {
   /**
    * Cannot be constructed.
    */
-  private constructor() {}
+  private constructor() { }
 
   public static encodeMulticall(calldatas: string | string[]): string {
     if (!Array.isArray(calldatas)) {

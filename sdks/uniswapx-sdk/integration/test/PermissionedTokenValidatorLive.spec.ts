@@ -19,16 +19,16 @@ describe('PermissionedTokenValidator Live Tests', () => {
     it('should perform preTransferCheck on live BUIDL token with exact user parameters', async () => {
       // Use the real provider from hardhat config
       const provider = ethers.provider;
-      
+
       // Verify we're on the correct network
       const network = await provider.getNetwork();
       console.log(`Testing on network: ${network.name} (chainId: ${network.chainId})`);
-      
+
       // Verify the token is in our permissioned tokens list
       const tokenConfig = PERMISSIONED_TOKENS.find(
         token => token.address.toLowerCase() === TOKEN_ADDRESS.toLowerCase() && token.chainId === CHAIN_ID
       );
-      
+
       expect(tokenConfig).to.not.be.undefined;
       expect(tokenConfig?.symbol).to.equal('BUIDL');
       expect(tokenConfig?.interface).to.equal('DSTokenInterface');
@@ -52,10 +52,10 @@ describe('PermissionedTokenValidator Live Tests', () => {
       );
 
       console.log(`preTransferCheck result: ${result}`);
-      
+
       // The result should be a boolean indicating whether the transfer is allowed
       expect(typeof result).to.equal('boolean');
-      
+
       // Log the result for debugging
       if (result) {
         console.log('✅ Transfer is allowed');

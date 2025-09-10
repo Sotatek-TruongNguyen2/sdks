@@ -108,17 +108,17 @@ const PRIORITY_ORDER_TYPES = {
 
 const PRIORITY_ORDER_ABI = [
   "tuple(" +
-    [
-      "tuple(address,address,uint256,uint256,address,bytes)", // OrderInfo
-      "address", // cosigner
-      "uint256", // auctionStartBlock
-      "uint256", // baselinePriorityFeeWei
-      "tuple(address,uint256,uint256)", // input
-      "tuple(address,uint256,uint256,address)[]", // outputs
-      "tuple(uint256)", // cosignerData
-      "bytes", // cosignature
-    ].join(",") +
-    ")",
+  [
+    "tuple(address,address,uint256,uint256,address,bytes)", // OrderInfo
+    "address", // cosigner
+    "uint256", // auctionStartBlock
+    "uint256", // baselinePriorityFeeWei
+    "tuple(address,uint256,uint256)", // input
+    "tuple(address,uint256,uint256,address)[]", // outputs
+    "tuple(uint256)", // cosignerData
+    "bytes", // cosignature
+  ].join(",") +
+  ")",
 ];
 
 export class UnsignedPriorityOrder implements OffChainOrder {
@@ -210,11 +210,11 @@ export class UnsignedPriorityOrder implements OffChainOrder {
    * @inheritdoc Order
    */
   get blockOverrides(): BlockOverrides {
-      return {
-        number: hexStripZeros(this.info.auctionStartBlock.toHexString()),
-      };
+    return {
+      number: hexStripZeros(this.info.auctionStartBlock.toHexString()),
+    };
   }
-  
+
 
   /**
    * @inheritdoc order

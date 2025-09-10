@@ -111,24 +111,24 @@ export class MixedRouteSDK<TInput extends Currency, TOutput extends Currency> {
       ({ nextInput, price }, pool) => {
         return nextInput.equals(pool.token0)
           ? {
-              nextInput: pool.token1,
-              price: price.multiply(pool.token0Price.asFraction),
-            }
+            nextInput: pool.token1,
+            price: price.multiply(pool.token0Price.asFraction),
+          }
           : {
-              nextInput: pool.token0,
-              price: price.multiply(pool.token1Price.asFraction),
-            }
+            nextInput: pool.token0,
+            price: price.multiply(pool.token1Price.asFraction),
+          }
       },
 
       this.pools[0].token0.equals(this.pathInput)
         ? {
-            nextInput: this.pools[0].token1,
-            price: this.pools[0].token0Price.asFraction,
-          }
+          nextInput: this.pools[0].token1,
+          price: this.pools[0].token0Price.asFraction,
+        }
         : {
-            nextInput: this.pools[0].token0,
-            price: this.pools[0].token1Price.asFraction,
-          }
+          nextInput: this.pools[0].token0,
+          price: this.pools[0].token1Price.asFraction,
+        }
     ).price
 
     return (this._midPrice = new Price(this.input, this.output, price.denominator, price.numerator))

@@ -22,7 +22,7 @@ export abstract class Payments {
   /**
    * Cannot be constructed.
    */
-  private constructor() {}
+  private constructor() { }
 
   private static encodeFeeBips(fee: Percent): string {
     return toHex(fee.multiply(10_000).quotient)

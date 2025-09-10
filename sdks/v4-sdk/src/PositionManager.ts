@@ -210,7 +210,7 @@ export abstract class V4PositionManager {
   /**
    * Cannot be constructed.
    */
-  private constructor() {}
+  private constructor() { }
 
   /**
    * Public methods to encode method parameters for different actions on the PositionManager contract
@@ -244,7 +244,7 @@ export abstract class V4PositionManager {
     // position.pool.currency0 is native if and only if options.useNative is set
     invariant(
       position.pool.currency0 === options.useNative ||
-        (!position.pool.currency0.isNative && options.useNative === undefined),
+      (!position.pool.currency0.isNative && options.useNative === undefined),
       NATIVE_NOT_SET
     )
 

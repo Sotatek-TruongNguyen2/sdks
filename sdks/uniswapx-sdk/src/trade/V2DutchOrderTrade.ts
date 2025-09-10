@@ -73,9 +73,9 @@ export class V2DutchOrderTrade<
 
   private _firstNonFeeOutputStartEndAmounts:
     | {
-        startAmount: CurrencyAmount<TOutput>;
-        endAmount: CurrencyAmount<TOutput>;
-      }
+      startAmount: CurrencyAmount<TOutput>;
+      endAmount: CurrencyAmount<TOutput>;
+    }
     | undefined;
 
   private getFirstNonFeeOutputStartEndAmounts(): {

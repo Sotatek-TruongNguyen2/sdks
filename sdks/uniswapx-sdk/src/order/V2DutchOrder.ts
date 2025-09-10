@@ -90,15 +90,15 @@ const V2_DUTCH_ORDER_TYPES = {
 
 const V2_DUTCH_ORDER_ABI = [
   "tuple(" +
-    [
-      "tuple(address,address,uint256,uint256,address,bytes)", // OrderInfo
-      "address", // cosigner
-      "tuple(address,uint256,uint256)", // input
-      "tuple(address,uint256,uint256,address)[]", // outputs
-      COSIGNER_DATA_TUPLE_ABI, // cosignerData
-      "bytes", // cosignature
-    ].join(",") +
-    ")",
+  [
+    "tuple(address,address,uint256,uint256,address,bytes)", // OrderInfo
+    "address", // cosigner
+    "tuple(address,uint256,uint256)", // input
+    "tuple(address,uint256,uint256,address)[]", // outputs
+    COSIGNER_DATA_TUPLE_ABI, // cosignerData
+    "bytes", // cosignature
+  ].join(",") +
+  ")",
 ];
 
 export class UnsignedV2DutchOrder implements OffChainOrder {
@@ -185,7 +185,7 @@ export class UnsignedV2DutchOrder implements OffChainOrder {
    * @inheritdoc order
    */
   get blockOverrides(): BlockOverrides {
-      return undefined
+    return undefined
   }
 
   /**

@@ -69,7 +69,7 @@ export interface WithdrawOptions {
 export abstract class Staker {
   public static INTERFACE: Interface = new Interface(IUniswapV3Staker.abi)
 
-  protected constructor() {}
+  protected constructor() { }
   private static INCENTIVE_KEY_ABI =
     'tuple(address rewardToken, address pool, uint256 startTime, uint256 endTime, address refundee)'
 

@@ -45,9 +45,9 @@ export class RelayOrderTrade<
 
   private _feeStartEndAmounts:
     | {
-        startAmount: CurrencyAmount<TInput>;
-        endAmount: CurrencyAmount<TInput>;
-      }
+      startAmount: CurrencyAmount<TInput>;
+      endAmount: CurrencyAmount<TInput>;
+    }
     | undefined;
 
   private _inputAmount: CurrencyAmount<TInput> | undefined;
