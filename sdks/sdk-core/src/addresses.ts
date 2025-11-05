@@ -20,7 +20,7 @@ type ChainAddresses = {
   v4QuoterAddress?: string
 }
 
-const DEFAULT_NETWORKS = [ChainId.MAINNET, ChainId.GOERLI, ChainId.SEPOLIA]
+const DEFAULT_NETWORKS = [ChainId.DOMA_MAINNET, ChainId.MAINNET, ChainId.DOMA, ChainId.GOERLI, ChainId.SEPOLIA]
 
 function constructSameAddressMap(address: string, additionalNetworks: ChainId[] = []): AddressMap {
   return DEFAULT_NETWORKS.concat(additionalNetworks).reduce<AddressMap>((memo, chainId) => {
@@ -44,6 +44,8 @@ export const UNISWAP_NFT_AIRDROP_CLAIM_ADDRESS = '0x8B799381ac40b838BBA4131ffB26
  */
 export const V2_FACTORY_ADDRESS = '0x5C69bEe701ef814a2B6a3EDD4B1652CB9cc5aA6f'
 export const V2_FACTORY_ADDRESSES: AddressMap = {
+  [ChainId.DOMA_MAINNET]: '0xF229A5154C7Ae1d54750D443A9c44eEE0530beca',
+  [ChainId.DOMA]: '0x5C69bEe701ef814a2B6a3EDD4B1652CB9cc5aA6f',
   [ChainId.MAINNET]: '0x5C69bEe701ef814a2B6a3EDD4B1652CB9cc5aA6f',
   [ChainId.GOERLI]: '0x5C69bEe701ef814a2B6a3EDD4B1652CB9cc5aA6f',
   [ChainId.SEPOLIA]: '0xF62c03E08ada871A0bEb309762E260a7a6a880E6',
@@ -67,6 +69,8 @@ export const V2_FACTORY_ADDRESSES: AddressMap = {
  */
 export const V2_ROUTER_ADDRESS = '0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D'
 export const V2_ROUTER_ADDRESSES: AddressMap = {
+  [ChainId.DOMA_MAINNET]: '0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D',
+  [ChainId.DOMA]: '0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D',
   [ChainId.MAINNET]: '0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D',
   [ChainId.GOERLI]: '0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D',
   [ChainId.SEPOLIA]: '0xeE567Fe1712Faf6149d80dA1E6934E354124CfE3',
@@ -85,16 +89,29 @@ export const V2_ROUTER_ADDRESSES: AddressMap = {
   [ChainId.SONEIUM]: '0x273f68c234fa55b550b40e563c4a488e0d334320',
 }
 
-// Networks that share most of the same addresses i.e. Mainnet, Goerli, Optimism, Arbitrum, Polygon
 const DEFAULT_ADDRESSES: ChainAddresses = {
+  v3CoreFactoryAddress: '0x1F98431c8aD98523631AE4a59f267346ea31F984',
+  multicallAddress: '0x1F98415757620B543A52E61c46B32eB19261F984',
+  quoterAddress: '0xb27308f9F90D607463bb33eA1BeBb41C27CE5AB6',
+  v3MigratorAddress: '0xA5644E29708357803b5A882D272c41cC0dF92B34',
+  nonfungiblePositionManagerAddress: '0xC36442b4a4522E871399CD717aBDD847Ab11FE88',
+}
+const MAINNET_ADDRESSES: ChainAddresses = {
+  ...DEFAULT_ADDRESSES,
+  mixedRouteQuoterV1Address: '0x84E44095eeBfEC7793Cd7d5b57B7e401D7f1cA2E',
+
+  v4PoolManagerAddress: '0x000000000004444c5dc75cB358380D2e3dE08A90',
+  v4PositionManagerAddress: '0xbd216513d74c8cf14cf4747e6aaa6420ff64ee9e',
+  v4StateView: '0x7ffe42c4a5deea5b0fec41c94c136cf115597227',
+  v4QuoterAddress: '0x52f0e24d1c21c8a0cb1e5a5dd6198556bd9e1203',
+}
+
+const DOMA_ADDRESSES: ChainAddresses = {
   v3CoreFactoryAddress: '0xF1398cA2C4F1113C5B618D71E4751D2E744f8369',
   multicallAddress: '0x926659bA37970CFC4723aa4B098204eEC0b6965e',
   quoterAddress: '0x823022BB81e50aBcD1f6cf9F8eE6e2557A345a9d',
   v3MigratorAddress: '0x4407B6e7eB9c877cB1192a681a91feF340F8817d',
   nonfungiblePositionManagerAddress: '0x3D34Ae8e53dc993C0F7Ee1AAa8020d3F0279147b',
-}
-const MAINNET_ADDRESSES: ChainAddresses = {
-  ...DEFAULT_ADDRESSES,
   mixedRouteQuoterV1Address: '0x84E44095eeBfEC7793Cd7d5b57B7e401D7f1cA2E',
 
   v4PoolManagerAddress: '0x3F4F166A11D44fb2F50E85Cd22008D81e2D1FF92',
@@ -104,6 +121,23 @@ const MAINNET_ADDRESSES: ChainAddresses = {
   tickLensAddress: '0x436f08a0c239e9bC5db55c90CF73efC6D2E8C325',
   swapRouter02Address: '0x7cE273df74dc43c79E5880Dd2c3eB44309236743'
 }
+
+const DOMA_MAINNET_ADDRESSES: ChainAddresses = {
+  v3CoreFactoryAddress: '0x2e50b586d5bcD04cb6125E028A6a669f7f3cF1C2',
+  multicallAddress: '0x722Cc8B61DBC684379a6D449D91E9d4047C63432',
+  quoterAddress: '0x2023ADF9fF50219C34989baABD76A0f5cfe432f4',
+  v3MigratorAddress: '0xE73103867BBE5ed589eE9d1056a363265974f225',
+  nonfungiblePositionManagerAddress: '0xce126ca6aceBBDCe95D7b8A3Ce637951640811E0',
+  mixedRouteQuoterV1Address: '0x84E44095eeBfEC7793Cd7d5b57B7e401D7f1cA2E',
+
+  v4PoolManagerAddress: '0xF229A5154C7Ae1d54750D443A9c44eEE0530beca',
+  v4PositionManagerAddress: '0xF229A5154C7Ae1d54750D443A9c44eEE0530beca',
+  v4StateView: '0xF229A5154C7Ae1d54750D443A9c44eEE0530beca',
+  v4QuoterAddress: '0xF229A5154C7Ae1d54750D443A9c44eEE0530beca',
+  tickLensAddress: '0x0fDad9964465900C0e835D930B44609F6cE716DA',
+  swapRouter02Address: '0x50cDfe221F0B478b7F58319d7b42cf61e5d904A9'
+}
+
 const GOERLI_ADDRESSES: ChainAddresses = {
   ...DEFAULT_ADDRESSES,
   mixedRouteQuoterV1Address: '0xBa60b6e6fF25488308789E6e0A65D838be34194e',
@@ -420,6 +454,8 @@ const SONEIUM_ADDRESSES: ChainAddresses = {
 }
 
 export const CHAIN_TO_ADDRESSES_MAP: Record<SupportedChainsType, ChainAddresses> = {
+  [ChainId.DOMA_MAINNET]: DOMA_MAINNET_ADDRESSES,
+  [ChainId.DOMA]: DOMA_ADDRESSES,
   [ChainId.MAINNET]: MAINNET_ADDRESSES,
   [ChainId.OPTIMISM]: OPTIMISM_ADDRESSES,
   [ChainId.ARBITRUM_ONE]: ARBITRUM_ONE_ADDRESSES,

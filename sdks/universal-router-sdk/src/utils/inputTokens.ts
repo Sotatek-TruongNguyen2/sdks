@@ -1,8 +1,8 @@
 import invariant from 'tiny-invariant'
 import { ethers } from 'ethers'
-import { validateAndParseAddress, BigintIsh } from '@uniswap/sdk-core'
-import { NFTPermitOptions, NonfungiblePositionManager } from '@uniswap/v3-sdk'
-import { PermitSingle } from '@uniswap/permit2-sdk'
+import { validateAndParseAddress, BigintIsh } from '@baberswap/sdk-core'
+import { NFTPermitOptions, NonfungiblePositionManager } from '@baberswap/v3-sdk'
+import { PermitSingle } from '@baberswap/permit2-sdk'
 import { CommandType, RoutePlanner } from './routerCommands'
 import { ROUTER_AS_RECIPIENT } from './constants'
 

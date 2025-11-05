@@ -1,6 +1,6 @@
-import { ChainId } from '@uniswap/sdk-core'
+import { ChainId } from '@baberswap/sdk-core'
 
-export const FACTORY_ADDRESS = '0xF1398cA2C4F1113C5B618D71E4751D2E744f8369'
+export const FACTORY_ADDRESS = '0x2e50b586d5bcD04cb6125E028A6a669f7f3cF1C2'
 
 export const ADDRESS_ZERO = '0x0000000000000000000000000000000000000000'
 

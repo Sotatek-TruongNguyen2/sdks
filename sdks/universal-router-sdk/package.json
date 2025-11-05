@@ -1,5 +1,6 @@
 {
-  "name": "@uniswap/universal-router-sdk",
+  "name": "@baberswap/universal-router-sdk",
+  "version": "1.0.7",
   "description": "sdk for integrating with the Universal Router contracts",
   "repository": "https://github.com/Uniswap/sdks.git",
   "keywords": [
@@ -29,16 +30,16 @@
     "test:hardhat": "env TS_NODE_COMPILER_OPTIONS='{\"module\": \"commonjs\" }' hardhat test"
   },
   "dependencies": {
+    "@baberswap/permit2-sdk": "1.0.3",
+    "@baberswap/router-sdk": "1.0.7",
+    "@baberswap/sdk-core": "1.0.8",
+    "@baberswap/v2-sdk": "1.0.5",
+    "@baberswap/v3-sdk": "1.0.5",
+    "@baberswap/v4-sdk": "1.0.5",
     "@openzeppelin/contracts": "4.7.0",
-    "@uniswap/permit2-sdk": "^1.3.0",
-    "@uniswap/router-sdk": "^2.0.2",
-    "@uniswap/sdk-core": "^7.7.1",
     "@uniswap/universal-router": "2.0.0-beta.2",
     "@uniswap/v2-core": "^1.0.1",
-    "@uniswap/v2-sdk": "^4.15.2",
     "@uniswap/v3-core": "1.0.0",
-    "@uniswap/v3-sdk": "^3.25.2",
-    "@uniswap/v4-sdk": "^1.21.2",
     "bignumber.js": "^9.0.2",
     "ethers": "^5.7.0"
   },

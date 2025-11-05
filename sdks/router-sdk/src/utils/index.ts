@@ -1,7 +1,7 @@
-import { Currency, Token } from '@uniswap/sdk-core'
-import { Pair } from '@uniswap/v2-sdk'
-import { Pool as V3Pool } from '@uniswap/v3-sdk'
-import { Pool as V4Pool } from '@uniswap/v4-sdk'
+import { Currency, Token } from '@baberswap/sdk-core'
+import { Pair } from '@baberswap/v2-sdk'
+import { Pool as V3Pool } from '@baberswap/v3-sdk'
+import { Pool as V4Pool } from '@baberswap/v4-sdk'
 import { MixedRouteSDK } from '../entities/mixedRoute/route'
 import { TPool } from './TPool'
 

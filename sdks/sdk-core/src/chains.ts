@@ -29,9 +29,13 @@ export enum ChainId {
   UNICHAIN = 130,
   MONAD_TESTNET = 10143,
   SONEIUM = 1868,
+  DOMA = 97476,
+  DOMA_MAINNET = 97477
 }
 
 export const SUPPORTED_CHAINS = [
+  ChainId.DOMA,
+  ChainId.DOMA_MAINNET,
   ChainId.MAINNET,
   ChainId.OPTIMISM,
   ChainId.OPTIMISM_GOERLI,

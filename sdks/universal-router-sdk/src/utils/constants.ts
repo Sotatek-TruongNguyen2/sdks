@@ -20,8 +20,8 @@ const WETH_NOT_SUPPORTED_ON_CHAIN = '0x0000000000000000000000000000000000000000'
 // Todo: Change `CHAIN_CONFIGS` to pull the UR address with v4
 export const CHAIN_CONFIGS: { [key: number]: ChainConfig } = {
   // mainnet
-  [1]: {
-    weth: '0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2',
+  [97476]: {
+    weth: '0x4200000000000000000000000000000000000006',
     routerConfigs: {
       [UniversalRouterVersion.V1_2]: {
         address: '0x7BD025f880C4D00AD009C70792Cbd0418556D667',
@@ -30,6 +30,32 @@ export const CHAIN_CONFIGS: { [key: number]: ChainConfig } = {
       [UniversalRouterVersion.V2_0]: {
         address: '0x7BD025f880C4D00AD009C70792Cbd0418556D667',
         creationBlock: 9462237,
+      },
+    },
+  },
+  [97477]: {
+    weth: '0x4200000000000000000000000000000000000006',
+    routerConfigs: {
+      [UniversalRouterVersion.V1_2]: {
+        address: '0x5089863E97196773038f98459262D866f2281f58',
+        creationBlock: 1444272,
+      },
+      [UniversalRouterVersion.V2_0]: {
+        address: '0x5089863E97196773038f98459262D866f2281f58',
+        creationBlock: 1444272,
+      },
+    },
+  },
+  [1]: {
+    weth: '0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2',
+    routerConfigs: {
+      [UniversalRouterVersion.V1_2]: {
+        address: '0x3fC91A3afd70395Cd496C647d5a6CC9D4B2b7FAD',
+        creationBlock: 17143817,
+      },
+      [UniversalRouterVersion.V2_0]: {
+        address: '0x66a9893cc07d91d95644aedd05d03f95e1dba8af',
+        creationBlock: 1737658355,
       },
     },
   },
